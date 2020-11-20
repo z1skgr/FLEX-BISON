@@ -1,0 +1,31 @@
+(* My first TeaC program *)
+
+let ii, jj <- 10 : int;
+let xx <- 3.5, yy: real;
+let ss [80]: string;
+
+const iii, jjj <- 10 : int;
+const xxx <- 3.5, yyyy: real;
+const sss [80]: string;
+
+const f6 <- (x: real): real => { return x * x; }
+
+const start <- (): int => {
+  let S[4]:int;
+  let i:int;
+  S[0]<- 5;
+  S[1]<- 6;
+  S[2]<- 7;
+  S[3]<- 8;
+  i<-0;
+
+  while i <= 3 loop
+  writeString("Number:\n");
+  writeInt(S[i]);
+  writeString("\n");
+  i<-i+1;
+  pool;
+
+  
+  writeString("Hellow World");
+}

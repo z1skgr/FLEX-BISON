@@ -1,0 +1,53 @@
+-- File: prime.tc
+let limit, number, counter: int;
+const prime <- (n: int): bool => {
+let i: int;
+let result, isPrime: bool;
+if n < 0 then
+result <- prime(-n);
+else if n < 2 then
+result <- false;
+else if n = 2 then
+result <- true;
+else if n % 2 = 0 then
+result <- false;
+else
+i <- 3;
+isPrime <- true;
+while isPrime and (i < n / 2) loop
+isPrime <- n % i != 0;
+i <- i + 2;
+if i = 100 then
+break;
+fi;
+pool;
+result <- isPrime;
+fi;
+fi;
+fi;
+fi;
+return result;
+};
+const start <- (): int => {
+writeString("\nSTART\n");
+writeString("Insert a number:");
+limit <- readInt();
+counter <- 0;
+number <- 2;
+while number <= limit loop
+if prime(number) then
+counter <- counter + 1;
+writeInt(counter);
+writeString(") Prime ");
+writeString("is ");
+writeInt(number);
+writeString("\n");
+fi;
+number <- number + 1;
+pool;
+writeString("\n");
+writeString("Prime Counter:");
+writeInt(counter);
+writeString("\nEND");
+return 0;
+}

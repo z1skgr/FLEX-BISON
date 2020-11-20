@@ -1,0 +1,32 @@
+
+let a, b: int;
+const N <- 100: int;
+const cube <- (i: int): int => {
+writeString("Cube of the second argument:");
+writeInt(i*i*i);
+writeString("\n");
+return i*i*i;
+}
+const add <- (n: int, k: int): int => {
+let j: int;
+writeString("Number of N is ");
+writeInt(N);
+writeString("\n");
+j <- (N-n) + cube(k);
+writeString("Result:");
+writeInt(j);
+writeString("\n");
+return j;
+}
+(* Here you can see some useless lines.
+* Just for testing the multi-line comments ...
+*)
+const start <- (): int => {
+writeString("Insert first number:");
+a <- readInt();
+writeString("Insert second number:");
+b <- readInt();
+writeString("\n");
+add(a, b); -- Here you can see some dummy comments!
+return 0;
+}

@@ -1,0 +1,79 @@
+-- File: prime.tc
+
+const N <- 100: int;
+let limit, number, counter: int;
+
+const prime <- (n: int): bool => {
+
+  let i: int; 
+  let result, isPrime: bool;
+let s [80]: string;
+
+  if n < 0 then
+    result <- prime(-n);
+  else if n < 2 then
+    result <- false;
+  else if n = 2 then
+    result <- true;
+  else if n % 2 = 0 then
+    result <- false;
+  else 
+    i <- 3;
+    isPrime := true;
+    while isPrime and (i < n / 2) loop
+      isPrime <- n % i != 0;
+      i <- i + 2;
+    pool;
+    result <- isPrime;
+  fi;
+  
+  return result;
+};
+
+const prime <- (n: int): bool => {
+
+  let i: int; 
+  let result, isPrime: bool;
+let s[80]: string;
+
+  if (n < 0) then
+    result <- prime(-n,k,ww);
+  else if (n < 2) then
+    result <- false;
+  else if n = 2 then
+    result <- true;
+  else if n % 2 = 0 then
+    result <- false;
+  else 
+    i <- +3;
+    isPrime := true;
+    while isPrime and (i < n / 2) loop
+      isPrime <- n % i != 0;
+      i <- i + 2;
+    pool;
+    result <- isPrime;
+  fi;
+  
+  return result;
+};
+
+const start <- (ss):int => {
+
+  limit <- readInt();
+  counter <- 0;
+  number <- 2;
+
+  while number <= limit loop 
+    if (prime(number)) then 
+      counter <- counter + 1;
+      writeInt(number);
+      writeString(" ;
+    fi;
+    number <- number + 1;
+  loop;
+  
+  writeString("input=3");
+  writeInt(10/4);
+	
+  return 0;
+}
