@@ -6,9 +6,9 @@ This project aims to the deepestunderstanding of the use of the application of t
 
 There are 2 modules in this project.
 
-1)Implement a verbal analyzer for a specific language(called Teac) using flex. <br />. This is the file .l
+1)Implement a verbal analyzer for a specific language(called Teac) using flex. This is the file .l . <br /> 
 
-2)Implement an editorial analyst for a specific language(called Teac)using bison. <br />. This is the file .y
+2)Implement an editorial analyst for a specific language(called Teac)using bison. This is the file .y . <br />. 
 
 3)Convert TeaC code to C code using bison actions. <br />
 
@@ -30,7 +30,7 @@ Verbal units are divided into the following categories:
 11) comments. <br />
 12) line comments. <br />
 
-#Editorial Rules
+# Editorial Rules
 The editorial rules determine the correct drafting of its verbal units.
 1)Program.<br />
 2)Data types.<br />
@@ -47,21 +47,21 @@ The editorial rules determine the correct drafting of its verbal units.
 # How to run
 This project can run in linux terminal using lex and bison packages. 
 
-Install flex
+**Install flex**
 sudo apt-get upgrade
 sudo apt-get install flex
 
-Install Bison
+**Install Bison**
 sudo apt-get install bison
 
 
 There are external libraries for executing the transformation for teac to C99 (teaclib.h /cgen.c /cgen.h). 
 
 The project can run as:
-bison -d -v -r all teac_parser.y
+**bison -d -v -r all teac_parser.y
 flex teac_lex.l
 gcc -o mycomp teac_parser.tab.c lex.yy.c cgen.c -lfl
-./mycomp < correct1.tc > C1output.c
+./mycomp < correct1.tc > C1output.c**
 
 For transformation to C execute
-gcc -Wall -std=c99 -o C1 C1output.c
+**gcc -Wall -std=c99 -o C1 C1output.c**
