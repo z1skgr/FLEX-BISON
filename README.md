@@ -8,7 +8,7 @@ There are 2 modules in this project.
 
 1)Implement a verbal analyzer for a specific language(called Teac) using flex. This is the file .l . <br /> 
 
-2)Implement an editorial analyst for a specific language(called Teac)using bison. This is the file .y . <br />. 
+2)Implement an editorial analyst for a specific language(called Teac)using bison. This is the file .y . <br />
 
 3)Convert TeaC code to C code using bison actions. <br />
 
@@ -58,10 +58,10 @@ sudo apt-get install bison
 There are external libraries for executing the transformation for teac to C99 (teaclib.h /cgen.c /cgen.h). 
 
 The project can run as: <br />. 
-**bison -d -v -r all teac_parser.y
-flex teac_lex.l
-gcc -o mycomp teac_parser.tab.c lex.yy.c cgen.c -lfl
-./mycomp < correct1.tc > C1output.c**
+**bison -d -v -r all teac_parser.y .<br />
+flex teac_lex.l .<br />
+gcc -o mycomp teac_parser.tab.c lex.yy.c cgen.c -lfl .<br />
+./mycomp < correct1.tc > C1output.c .<br />**
 
 For transformation to C execute
-**gcc -Wall -std=c99 -o C1 C1output.c**
+**gcc -Wall -std=c99 -o C1 C1output.c .<br />**
