@@ -57,11 +57,11 @@ sudo apt-get install bison
 
 There are external libraries for executing the transformation for teac to C99 (**teaclib.h /cgen.c /cgen.h**). 
 
-The project can run as: <br />. 
+The project can run as: <br />
 **bison -d -v -r all teac_parser.y .<br />
 flex teac_lex.l .<br />
 gcc -o mycomp teac_parser.tab.c lex.yy.c cgen.c -lfl .<br />
 ./mycomp < correct1.tc > C1output.c .<br />**
 
-For transformation to C execute
+For transformation to C execute .<br />
 **gcc -Wall -std=c99 -o C1 C1output.c .<br />**
