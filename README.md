@@ -16,7 +16,7 @@ In addition,TeaC code is converted to C code using bison actions. <br />
 # TeaC Language
 The description of the TeaC language below follows the general description format of a language Programming. The verbal units of the TeaC language are divided into the following categories:
 # Verbal Units
-Verbal units are divided into the following categories:
+Verbal units are divided into the following categories:  <br />
 1) keywords. <br />
 2) identifiers. <br />
 3) integer positive constants. <br />
