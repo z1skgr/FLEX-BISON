@@ -10,7 +10,7 @@ There are 2 modules in this project.
 
 2)Implement an editorial analyst for a specific language(called Teac)using bison. This is the file .y . <br />
 
-3)Convert TeaC code to C code using bison actions. <br />
+In addition,TeaC code is converted to C code using bison actions. <br />
 
 
 # TeaC Language
