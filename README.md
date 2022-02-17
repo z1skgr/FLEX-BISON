@@ -10,17 +10,50 @@
 
 ## General Information
 The source input code is written in the fictional TeaC programming language and the generated code
-is in C. <br>
+is in C. Each TeaC program is a set of word units, which are arranged according to syntax rules.
 The implementation is split to two parts
 * Lexical Analyzer
 * Parser Generator
+  * Convertion fictional code to C code using bison actions.   
 
+### Flex
+* Keywords
+* Identifiers
+* Constants
+    * Boolean
+    * Real positive
+    * Strings
+* Operators
+* Delimiters
+* Specials (white space, comments, line commants)
+
+
+| Keywords |     |  |
+| ------------- | ------------- | ------------  |
+| int  | real  | bool  |
+| string  | true| false  |
+| if  | then  | else  |
+| fi  | while  | loop |
+| pool  | const  | let  |
+| return  | not  | end  |
+| or  | start  |   |
+
+## Bison
+* Programs
+    * Declarations
+    * Functions
+    * Main Body 
+* Data Types
+* One dimensional array
+* Variables
+* Functions
+* Expressions
+* Commands
+* Constants
+
+In bison, the mapping is done from the fictional language to C.
 
 ## Screenshots
-
-
-## Technologies Used
-
 
 ## Installation
 ```
@@ -28,6 +61,8 @@ $ sudo apt-get install flex
 $ sudo apt update
 $ sudo apt install bison
 ```
+
+
 For any help 
 ```
 $ bison --help
@@ -48,7 +83,7 @@ gcc -o teac teac_parser.tab.c lex.yy.c cgen.c -lfl
 gcc -Wall -std=c99 -o out output.c
 ./out
 ```
-In `\scripts\script.c` has an example of testing.
+In `\scripts`, there are a few script for testing code for different sample inputs. ` correct1.tc` is the source code of teac language. In file, there are some sample of teac source code for various tests.
 
 ## Acknowledgements
 - This project was created for the requirements of the lesson Theory of Computation
