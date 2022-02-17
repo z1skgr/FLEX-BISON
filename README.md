@@ -17,6 +17,7 @@ The implementation is split to two parts
   * Convertion fictional code to C code using bison actions.   
 
 ### Flex
+Follows the general form of description of a language programming.
 * Keywords
 * Identifiers
 * Constants
@@ -39,6 +40,7 @@ The implementation is split to two parts
 | or  | start  |   |
 
 ## Bison
+The syntactic rules of the language define the correct syntax of its word units
 * Programs
     * Declarations
     * Functions
