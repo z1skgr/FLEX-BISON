@@ -1,67 +1,74 @@
 # Theory of Computation
- Flex-Bison
+> A simple material information management program.
+## Table of contents
+* [General Info](#general-information)
+* [Technologies Used](#technologies-used)
+* [Screenshots](#screenshots)
+* [Room for Improvement](#room-for-improvement)
+* [Setup](#setup)
+* [Acknowledgements](#acknowledgements)
 
-# Introduction
-This project aims to the deepestunderstanding of the use of the application of theoretical tools, such as regular expressions and grammatical without context, to the problem of compilation of programming languages. In particular, the work is about designing and implementing the initial stages of a compiler for the fantastic TeaC programming language.
+## General Information
+Α program that will manage material information. Costs for the supply of raw materials will be calculated and the production of intermediates and
+final products in order to satisfy some orders. he distinction of materials into categories follows the following rules:
 
-There are 2 modules in this project.
+- Raw materials
+- Intermediate products[^1]
+- Final products
 
-1)Implement a verbal analyzer for a specific language(called Teac) using flex. This is the file .l . <br /> 
-
-2)Implement an editorial analyst for a specific language(called Teac)using bison. This is the file .y . <br />
-
-In addition,TeaC code is converted to C code using bison actions. <br />
-
-
-# TeaC Language
-The description of the TeaC language below follows the general description format of a language Programming. The verbal units of the TeaC language are divided into the following categories:
-# Verbal Units
-Verbal units are divided into the following categories:  <br />
-1) keywords. <br />
-2) identifiers. <br />
-3) integer positive constants. <br />
-4) real positive constants. <br />
-5) boolean constants. <br />
-6) constants strings. <br />
-7) operators. <br />
-8) identifiers. <br />
-9) delimiters. <br />
-10) white space. <br />
-11) comments. <br />
-12) line comments. <br />
-
-# Editorial Rules
-The editorial rules determine the correct drafting of its verbal units.
-1)Program.<br />
-2)Data types.<br />
-3)Variables.<br />
-4)Constants.<br />
-5)Functions.<br />
-6)Expressions.<br />
-7)Statements.<br />
-
-# Mapping from TeaC to C99
-1) Assign data type and constants.<br />
-2) Assigning verbal blocks
-
-# How to run
-This project can run in linux terminal using lex and bison packages. 
-
-**Install flex**
-sudo apt-get upgrade
-sudo apt-get install flex
-
-**Install Bison**
-sudo apt-get install bison
+```mermaid
+graph TD;
+    A[8-A]-->|3|B[1-B];
+    A-->|5|C[2-C];
+    A-->|1|D[3-D];
+    C-->|2|E[4-E];
+    C-->|4|F[5-F];
+    D-->|3|G[6-G];
+    D-->|8|H[7-H];
+```
+The program reads an input file containing information about each type of material that assembles the final product. The file
+will also have information on pending final product orders.
 
 
-There are external libraries for executing the transformation for teac to C99 (**teaclib.h /cgen.c /cgen.h**). 
+The input file is formatted as follows
+````
+```
+<Materials count>
+<Code> <Material Name> <Quantity> <Number of Ingredients> <Code1> <Quantity1>...
+<Code> <Units requested>
+```
+````
 
-The project can run as: <br />
-**bison -d -v -r all teac_parser.y .<br />
-flex teac_lex.l .<br />
-gcc -o mycomp teac_parser.tab.c lex.yy.c cgen.c -lfl .<br />
-./mycomp < correct1.tc > C1output.c .<br />**
+The output file is formatted as follows
 
-For transformation to C execute .<br />
-**gcc -Wall -std=c99 -o C1 C1output.c .<br />**
+````
+```
+Number of material types: <Number>
+<Code>/<Name> - <Units number> units in stock - <Units number> units needed.
+```
+````
+
+
+
+## Screenshots
+
+
+## Technologies Used
+C Integrated Development Environment (IDE)
+
+## Setup
+Basic project for language learning. <br />
+External text input with two parts
+- The first part describes the types of materials 
+- The second part the pending orders. 
+
+Τhen we give an example of an input file. <br />
+https://github.com/z1skgr/Managing-Materials/issues/1#issue-1140284274
+
+
+
+## Acknowledgements
+- This project was one of my very first project for learning C.
+- This project was created for the requirements of the lesson Introduction to Computers.
+
+[^1]: Intermediate products can be an intermediate composition.
