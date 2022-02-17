@@ -48,7 +48,7 @@ gcc -o teac teac_parser.tab.c lex.yy.c cgen.c -lfl
 gcc -Wall -std=c99 -o out output.c
 ./out
 ```
-In `\script\script.c` has an example of testing.
+In `\scripts\script.c` has an example of testing.
 
 ## Acknowledgements
 - This project was created for the requirements of the lesson Theory of Computation
