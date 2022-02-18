@@ -17,7 +17,6 @@ is in C. Each TeaC program is a set of word units, which are arranged according 
 Scans words in text files  in token format. For more information https://www.geeksforgeeks.org/flex-fast-lexical-analyzer-generator/.<br>
 General form of description of a language programming. 
 
-<p align="left">
 * Keywords
 * Identifiers
 * Constants
@@ -27,8 +26,8 @@ General form of description of a language programming.
 * Operators
 * Delimiters
 * Specials (white space, comments)
-</p>
-<p align="right">
+
+
 | Keywords |     |  |
 | ------------- | ------------- | ------------  |
 | int  | real  | bool  |
@@ -38,7 +37,7 @@ General form of description of a language programming.
 | pool  | const  | let  |
 | return  | not  | end  |
 | or  | start  |   |
-</p>
+
 
 
 
