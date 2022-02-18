@@ -1,4 +1,4 @@
-# TeaC Compiler
+# Compiler generation (TeaC Compiler
 > Source-to-source compiler (trans-compiler or transpiler) using FLEX & BISON.
 ## Table of contents
 * [General Info](#general-information)
