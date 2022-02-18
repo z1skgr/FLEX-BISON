@@ -1,10 +1,10 @@
 # Theory of Computation
-> Source-to-source compiler (trans-compiler or transpiler).
+> Source-to-source compiler (trans-compiler or transpiler) using FLEX & BISON.
 ## Table of contents
 * [General Info](#general-information)
-* [Technologies Used](#technologies-used)
 * [Screenshots](#screenshots)
 * [Installation](#installation)
+* [Execution](#exec)
 * [Acknowledgements](#acknowledgements)
 
 ## General Information
@@ -38,7 +38,7 @@ Follows the general form of description of a language programming.
 | return  | not  | end  |
 | or  | start  |   |
 
-## Bison
+### Bison
 The syntactic rules of the language define the correct syntax of its word units:
 * Programs
     * Declarations
