@@ -4,14 +4,13 @@
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Screenshots](#screenshots)
-* [Room for Improvement](#room-for-improvement)
-* [Setup](#setup)
+* [Installation](#installation)
 * [Acknowledgements](#acknowledgements)
 
 ## General Information
 The source input code is written in the fictional TeaC programming language and the generated code
 is in C. Each TeaC program is a set of word units, which are arranged according to syntax rules.
-The implementation is split to two parts
+The implementation is split to two parts:
 * Lexical Analyzer
 * Parser Generator
   * Convertion fictional code to C code using bison actions.   
@@ -26,7 +25,7 @@ Follows the general form of description of a language programming.
     * Strings
 * Operators
 * Delimiters
-* Specials (white space, comments, line commants)
+* Specials (white space, comments)
 
 
 | Keywords |     |  |
@@ -40,7 +39,7 @@ Follows the general form of description of a language programming.
 | or  | start  |   |
 
 ## Bison
-The syntactic rules of the language define the correct syntax of its word units
+The syntactic rules of the language define the correct syntax of its word units:
 * Programs
     * Declarations
     * Functions
@@ -53,11 +52,12 @@ The syntactic rules of the language define the correct syntax of its word units
 * Commands
 * Constants
 
-In bison, the mapping is done from the fictional language to C.
+
 
 ## Screenshots
 
 ## Installation
+* In linux terminal, run commands to install tools
 ```
 $ sudo apt-get install flex
 $ sudo apt update
@@ -74,12 +74,32 @@ Use the latest version for both tools <br>
 * [Bison](https://github.com/akimd/bison)
 
 
+* GCC install to converter parser rules to a recognized programming language (C in this case)
+```
+$ sudo apt install build-essential
+$ sudo apt-get update
+```
+Verify correctly installation with the version of the GCC
+```gcc --version```
+
 ## Execution
-In linux terminal
+* Syntax analysis from parser
 ```
 bison -d -v -r  <parser_name>.y
+```
+* Lexical analysis from lexer
+```
 flex <analyzer name>.l
+```
+* Build executable in C using the extracted rules
+```
 gcc -o teac teac_parser.tab.c lex.yy.c cgen.c -lfl
+```
+```cgen.c``` contains function for lex to handle string. In other words, uses buffers to handle the parser's tokens. <br>
+Error in stream => Error in syntax => No executable <br>
+
+
+
 ./teac < correct1.tc > output.c
 
 gcc -Wall -std=c99 -o out output.c
