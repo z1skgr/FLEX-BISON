@@ -14,7 +14,7 @@ is in C. Each TeaC program is a set of word units, which are arranged according 
   * Convertion fictional code to C code using bison actions.   
 
 ### Flex
-Scans words in text files  in token format. For more information https://www.geeksforgeeks.org/flex-fast-lexical-analyzer-generator/
+Scans words in text files  in token format. For more information https://www.geeksforgeeks.org/flex-fast-lexical-analyzer-generator/.<br>
 General form of description of a language programming. 
 * Keywords
 * Identifiers
