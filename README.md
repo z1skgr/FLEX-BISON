@@ -71,11 +71,10 @@ $ sudo apt install bison
 ```
 
 
-For any help 
+For any help, see
 ```
 $ bison --help
 ```
-Use the latest version for both tools.
 
 * GCC install to converter parser rules to a recognized programming language (C in this case)
 ```
