@@ -1,5 +1,5 @@
-# Compiler generation (TeaC Compiler
-> Source-to-source compiler (trans-compiler or transpiler) using FLEX & BISON.
+# Compiler generation (TeaC Compiler)
+> Source-to-source compiler (trans-compiler or transpiler) using FLEX & BISON. 
 ## Table of contents
 * [General Info](#general-information)
 * [Installation](#installation)
@@ -7,11 +7,11 @@
 * [Acknowledgements](#acknowledgements)
 
 ## General Information
-The input files (file .tc) is written in the fictional TeaC programming language and the generated code
-is in C. Each TeaC program is a set of word units, which are arranged according to syntax rules. We generate a compiler that recognizes .tc archives and generate the equivalent C code. The implementation is split to two parts:
+The input files (file .tc) is written in the fictional TeaC programming language and the generated code is in C. Each TeaC program is a set of word units, which are arranged according to syntax rules. We generate a compiler that recognizes .tc archives and generate the equivalent C code. The implementation is split to two parts:
 * Lexical Analyzer
 * Parser Generator
   * Convertion fictional code to C code using bison actions.   
+
 
 ### Flex
 General form of description of a language programming. Scans words in text files in token format and corresponds them to grammatical rules (declared in `.l` file)
