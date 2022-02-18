@@ -1,4 +1,4 @@
-# Theory of Computation
+# TeaC Compiler
 > Source-to-source compiler (trans-compiler or transpiler) using FLEX & BISON.
 ## Table of contents
 * [General Info](#general-information)
@@ -7,7 +7,7 @@
 * [Acknowledgements](#acknowledgements)
 
 ## General Information
-The source input code is written in the fictional TeaC programming language and the generated code
+The input files ( is written in the fictional TeaC programming language and the generated code
 is in C. Each TeaC program is a set of word units, which are arranged according to syntax rules.
 The implementation is split to two parts:
 * Lexical Analyzer
@@ -95,7 +95,7 @@ gcc -o teac <parser_name>.tab.c <analyzer name>.yy.c cgen.c -lfl
 ```cgen.c``` contains function for lex to handle string. In other words, uses buffers to handle the parser's tokens. Error in stream => Error in syntax => No executable 
  <br>
 
-* Convert the fictional input to a C
+* Convert the fictional input to a .c file
 ```
 ./teac < <TeaC input name>.tc> output.c
  ```
@@ -104,8 +104,7 @@ gcc -o teac <parser_name>.tab.c <analyzer name>.yy.c cgen.c -lfl
 gcc -Wall -std=c99 -o out output.c
 ./out
 ```
-In `\scripts`, there are a few script for testing code for different sample inputs. ` correct1.tc` is the source code of teac language. In file, there are some sample of teac source code for various tests.
-
+In `\scripts`, there are a few script for testing code for different sample inputs. ` correct1.tc` is a sample of source code of TeaC language. 
 ## Acknowledgements
 - This project was created for the requirements of the lesson Theory of Computation
 
