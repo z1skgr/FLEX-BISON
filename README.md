@@ -7,15 +7,15 @@
 * [Acknowledgements](#acknowledgements)
 
 ## General Information
-The input files ( is written in the fictional TeaC programming language and the generated code
-is in C. Each TeaC program is a set of word units, which are arranged according to syntax rules.
-The implementation is split to two parts:
+The input files (.tc file) is written in the fictional TeaC programming language and the generated code
+is in C. Each TeaC program is a set of word units, which are arranged according to syntax rules. We generate a compiler that recognizes .tc archives and generate the equivalent C code. The implementation is split to two parts:
 * Lexical Analyzer
 * Parser Generator
   * Convertion fictional code to C code using bison actions.   
 
 ### Flex
-General form of description of a language programming.
+Scans words in text files  in token format. For more information https://www.geeksforgeeks.org/flex-fast-lexical-analyzer-generator/
+General form of description of a language programming. 
 * Keywords
 * Identifiers
 * Constants
@@ -37,7 +37,10 @@ General form of description of a language programming.
 | return  | not  | end  |
 | or  | start  |   |
 
+`.y` file contains the lexical rules. 
+
 ### Bison
+For more information https://www.geeksforgeeks.org/bison-command-in-linux-with-examples/
 Syntactic rules of the language define the correct syntax of its word units:
 * Programs
     * Declarations
@@ -50,6 +53,8 @@ Syntactic rules of the language define the correct syntax of its word units:
 * Expressions
 * Commands
 * Constants
+
+makes <parser_name>.tab.c, <parser_name>.tab.h files
 
 
 ## Installation
@@ -66,8 +71,8 @@ For any help
 $ bison --help
 ```
 Use the latest version for both tools: 
-[Flex](https://github.com/westes/flex) <t>
-[Bison](https://github.com/akimd/bison)
+[Flex](https://howtoinstall.co/en/flex) <t>
+[Bison](https://geeksww.com/tutorials/miscellaneous/bison_gnu_parser_generator/installation/installing_bison_gnu_parser_generator_ubuntu_linux.php)
 
 * GCC install to converter parser rules to a recognized programming language (C in this case)
 ```
