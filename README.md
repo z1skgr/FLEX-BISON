@@ -2,9 +2,8 @@
 > Source-to-source compiler (trans-compiler or transpiler) using FLEX & BISON.
 ## Table of contents
 * [General Info](#general-information)
-* [Screenshots](#screenshots)
 * [Installation](#installation)
-* [Execution](#exec)
+* [Execution](#execution)
 * [Acknowledgements](#acknowledgements)
 
 ## General Information
@@ -16,7 +15,7 @@ The implementation is split to two parts:
   * Convertion fictional code to C code using bison actions.   
 
 ### Flex
-Follows the general form of description of a language programming.
+General form of description of a language programming.
 * Keywords
 * Identifiers
 * Constants
@@ -39,7 +38,7 @@ Follows the general form of description of a language programming.
 | or  | start  |   |
 
 ### Bison
-The syntactic rules of the language define the correct syntax of its word units:
+Syntactic rules of the language define the correct syntax of its word units:
 * Programs
     * Declarations
     * Functions
@@ -52,9 +51,6 @@ The syntactic rules of the language define the correct syntax of its word units:
 * Commands
 * Constants
 
-
-
-## Screenshots
 
 ## Installation
 * In linux terminal, run commands to install tools
@@ -79,7 +75,9 @@ $ sudo apt install build-essential
 $ sudo apt-get update
 ```
 Verify correctly installation with the version of the GCC
-```gcc --version```
+```
+ gcc --version
+```
 
 ## Execution
 * Syntax analysis from parser
@@ -90,18 +88,19 @@ bison -d -v -r  <parser_name>.y
 ```
 flex <analyzer name>.l
 ```
-* Build executable in C using the extracted rules
+* Build compiler using the extracted rules
 ```
 gcc -o teac teac_parser.tab.c lex.yy.c cgen.c -lfl
 ```
-```cgen.c``` contains function for lex to handle string. In other words, uses buffers to handle the parser's tokens. <br>
-Error in stream => Error in syntax => No executable 
+```cgen.c``` contains function for lex to handle string. In other words, uses buffers to handle the parser's tokens. Error in stream => Error in syntax => No executable 
+ <br>
 
-
+* Convert the fictional input to a C
 ```
 ./teac < correct1.tc > output.c
  ```
-
+* Build and run
+```
 gcc -Wall -std=c99 -o out output.c
 ./out
 ```
