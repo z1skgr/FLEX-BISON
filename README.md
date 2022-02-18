@@ -7,16 +7,14 @@
 * [Acknowledgements](#acknowledgements)
 
 ## General Information
-The input files (.tc file) is written in the fictional TeaC programming language and the generated code
+The input files (file .tc) is written in the fictional TeaC programming language and the generated code
 is in C. Each TeaC program is a set of word units, which are arranged according to syntax rules. We generate a compiler that recognizes .tc archives and generate the equivalent C code. The implementation is split to two parts:
 * Lexical Analyzer
 * Parser Generator
   * Convertion fictional code to C code using bison actions.   
 
 ### Flex
-Scans words in text files  in token format. For more information https://www.geeksforgeeks.org/flex-fast-lexical-analyzer-generator/.<br>
-General form of description of a language programming. 
-
+General form of description of a language programming. Scans words in text files in token format and corresponds them to grammatical rules (declared in `.y` file)
 * Keywords
 * Identifiers
 * Constants
@@ -27,6 +25,7 @@ General form of description of a language programming.
 * Delimiters
 * Specials (white space, comments)
 
+In this version, we have set some specific words for TeaC as keywords:
 
 | Keywords |     |  |
 | ------------- | ------------- | ------------  |
@@ -38,16 +37,17 @@ General form of description of a language programming.
 | return  | not  | end  |
 | or  | start  |   |
 
+The other categories have basic common programming language content (possibly with some shortcomings, check .l for clarifications)
+
+For more information about Flex, see https://www.geeksforgeeks.org/flex-fast-lexical-analyzer-generator/.<br>
 
 
 
 
 
 
-`.y` file contains the lexical rules. 
 
 ### Bison
-For more information https://www.geeksforgeeks.org/bison-command-in-linux-with-examples/
 Syntactic rules of the language define the correct syntax of its word units:
 * Programs
     * Declarations
@@ -61,11 +61,12 @@ Syntactic rules of the language define the correct syntax of its word units:
 * Commands
 * Constants
 
-makes <parser_name>.tab.c, <parser_name>.tab.h files
-
+It builds `<parser_name>.tab.c, <parser_name>.tab.h` files.<br>
+For more information https://www.geeksforgeeks.org/bison-command-in-linux-with-examples/
 
 ## Installation
-* In linux terminal, run commands to install tools
+* In linux terminal, run commands to install tools. 
+
 ```
 $ sudo apt-get install flex
 $ sudo apt update
@@ -77,9 +78,7 @@ For any help
 ```
 $ bison --help
 ```
-Use the latest version for both tools: 
-[Flex](https://howtoinstall.co/en/flex) <t>
-[Bison](https://geeksww.com/tutorials/miscellaneous/bison_gnu_parser_generator/installation/installing_bison_gnu_parser_generator_ubuntu_linux.php)
+Use the latest version for both tools.
 
 * GCC install to converter parser rules to a recognized programming language (C in this case)
 ```
