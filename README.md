@@ -81,7 +81,7 @@ $ bison --help
 $ sudo apt install build-essential
 $ sudo apt-get update
 ```
-Verify correctly installation with the version of the GCC
+* Verify correctly installation with the version of the GCC
 ```
  gcc --version
 ```
