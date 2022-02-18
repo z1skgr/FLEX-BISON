@@ -59,7 +59,7 @@ Syntactic rules of the language define the correct syntax of its word units:
 * Commands
 * Constants
 
-It builds `<parser_name>.tab.c, <parser_name>.tab.h` files.<br>. For more information https://www.geeksforgeeks.org/bison-command-in-linux-with-examples/
+It builds `<parser_name>.tab.c, <parser_name>.tab.h` files.<br> For more information https://www.geeksforgeeks.org/bison-command-in-linux-with-examples/
 
 ## Installation
 * In linux terminal, run commands to install tools. 
