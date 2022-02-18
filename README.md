@@ -47,12 +47,12 @@ The other categories have basic common programming language content (possibly wi
 
 ### Bison
 Syntactic rules of the language define the correct syntax of its word units:
-* Programs
+* Main
     * Declarations
     * Functions
-    * Main Body 
+    * Body 
 * Data Types
-* One dimensional array
+* Array (one dimension)
 * Variables
 * Functions
 * Expressions
