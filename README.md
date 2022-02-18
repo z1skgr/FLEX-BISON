@@ -104,7 +104,7 @@ gcc -o teac <parser_name>.tab.c <analyzer name>.yy.c cgen.c -lfl
 
 * Convert the fictional input to a .c file
 ```
-./teac < <TeaC input name>.tc> output.c
+./teac < <TeaC_input>.tc> output.c
  ```
 * Build and run
 ```
