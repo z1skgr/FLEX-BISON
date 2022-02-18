@@ -37,9 +37,7 @@ In this version, we have set some specific words for TeaC as keywords:
 | return  | not  | end  |
 | or  | start  |   |
 
-The other categories have basic common programming language content (possibly with some shortcomings, check `.l` for clarifications)
-
-For more information about Flex, see https://www.geeksforgeeks.org/flex-fast-lexical-analyzer-generator/.<br>
+The other categories have basic common programming language content (possibly with some shortcomings, check `.l` for clarifications). For more information about Flex, see https://www.geeksforgeeks.org/flex-fast-lexical-analyzer-generator/.<br>
 
 
 
