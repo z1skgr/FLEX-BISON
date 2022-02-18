@@ -69,10 +69,9 @@ For any help
 ```
 $ bison --help
 ```
-Use the latest version for both tools <br>
-* [Flex](https://github.com/westes/flex) 
-* [Bison](https://github.com/akimd/bison)
-
+Use the latest version for both tools: 
+[Flex](https://github.com/westes/flex) <t>
+[Bison](https://github.com/akimd/bison)
 
 * GCC install to converter parser rules to a recognized programming language (C in this case)
 ```
