@@ -95,11 +95,12 @@ flex <analyzer name>.l
 gcc -o teac teac_parser.tab.c lex.yy.c cgen.c -lfl
 ```
 ```cgen.c``` contains function for lex to handle string. In other words, uses buffers to handle the parser's tokens. <br>
-Error in stream => Error in syntax => No executable <br>
+Error in stream => Error in syntax => No executable 
 
 
-
+```
 ./teac < correct1.tc > output.c
+ ```
 
 gcc -Wall -std=c99 -o out output.c
 ./out
