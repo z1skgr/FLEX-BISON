@@ -99,7 +99,7 @@ flex <analyzer name>.l
 ```
 gcc -o teac <parser_name>.tab.c <analyzer name>.yy.c cgen.c -lfl
 ```
-```cgen.c``` contains function for lex to handle string. In other words, uses buffers to handle the parser's tokens. Error in stream => Error in syntax => No executable 
+```cgen.c``` contains function for lex to handle string. In other words, uses buffers to handle the parser's tokens. <br>Error in stream => Error in syntax => No executable 
  <br>
 
 * Convert the fictional input to a .c file
