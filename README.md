@@ -90,14 +90,14 @@ flex <analyzer name>.l
 ```
 * Build compiler using the extracted rules
 ```
-gcc -o teac teac_parser.tab.c lex.yy.c cgen.c -lfl
+gcc -o teac <parser_name>.tab.c <analyzer name>.yy.c cgen.c -lfl
 ```
 ```cgen.c``` contains function for lex to handle string. In other words, uses buffers to handle the parser's tokens. Error in stream => Error in syntax => No executable 
  <br>
 
 * Convert the fictional input to a C
 ```
-./teac < correct1.tc > output.c
+./teac < <TeaC input name>.tc> output.c
  ```
 * Build and run
 ```
